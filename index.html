@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>titel</title>
+  <!-- tailwind css -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- font awsem -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZmCULaM8y+5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ2UEmdXPsLZtJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+
+  <!-- custom css -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="navbar bg-blue-200 shadow-sm">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+            <li>
+              <button
+                class="border-2 border-blue-900 rounded-md flex items-center px-2 py-1 gap-2 hover:bg-lime-400 hover:text-white">
+                <img src="./assets/fa-circle-question.png" alt="question">FAQ
+              </button>
+
+            </li>
+            <li>
+              <button
+                class="border-2 border-blue-900 rounded-md flex items-center px-2 py-1 gap-2 hover:bg-lime-400 hover:text-white">
+                <img src="./assets/fa-book-open.png" alt="question">Learn
+              </button>
+            </li>
+            <li>
+              <button
+                class="border-2 border-blue-900 rounded-md flex items-center px-2 py-1 gap-2 hover:bg-lime-400 hover:text-white">
+                <img src="./assets/fa-arrow-right-from-bracket.png" alt="question">Logout
+              </button>
+            </li>
+          </ul>
+        </div>
+        <a href="#" class="flex items-center">
+          <h1 class="text-2xl font-bold ">
+            English
+          </h1>
+          <img src="./assets/logo.png" alt="logo">
+          <p>জানালা</p>
+
+        </a>
+      </div>
+      <div class="navbar-end hidden lg:flex">
+        <ul class="menu menu-horizontal px-1 gap-4">
+          <li>
+            <button
+              class="border-2 border-blue-900 rounded-md flex items-center px-2 py-1 gap-2 hover:bg-lime-400 hover:text-white">
+              <img src="./assets/fa-circle-question.png" alt="question">FAQ
+            </button>
+
+          </li>
+          <li>
+            <button
+              class="border-2 border-blue-900 rounded-md flex items-center px-2 py-1 gap-2 hover:bg-lime-400 hover:text-white">
+              <img src="./assets/fa-book-open.png" alt="question">Learn
+            </button>
+          </li>
+          <li>
+            <button
+              class="border-2 border-blue-900 rounded-md flex items-center px-2 py-1 gap-2 hover:bg-lime-400 hover:text-white">
+              <img src="./assets/fa-arrow-right-from-bracket.png" alt="question">Logout
+            </button>
+          </li>
+        </ul>
+      </div>
+      <!-- <div class="">
+        <a class="btn">Button</a>
+      </div> -->
+    </div>
+
+
+  </header>
+  <section class="flex flex-col-reverse md:flex-row justify-between items-center  py-5 w-11/12      mx-auto ">
+    <div class="flex-1">
+      <h1 class=" text-4xl mb-10"><span class="text-blue-500 font-bold">English</span> is Easy!!</h1>
+      <p class="text-md">
+        আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive
+        Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ
+      </p>
+    </div>
+
+    <div class="flex-1 ">
+      <img src="./assets/hero-student.png" alt="student">
+
+
+    </div>
+  </section>
+
+  <section>
+    <h2 class="text-3xl font-semibold text-center mb-8 ">
+      <span class="text-blue-500"> Let's</span>
+      Learn Vocabularies
+    </h2>
+
+    <div id="level-container" class="flex flex-wrap justify-center gap-4 ">
+
+    </div>
+  </section>
+
+  <section id="word-container" class="my-10 w-11/12 mx-auto bg-gray-400 py-10 grid grid-cols-4 gap-4">
+
+    <div
+      class="w-[258px] h-[258px] bg-white rounded-2xl shadow-lg flex flex-col justify-between items-center p-6 text-center transition hover:shadow-xl py-10 px-5 space-x-5 ml-5 ">
+      <!-- Word Section -->
+      <div>
+        <h2 class="text-2xl font-bold text-gray-800 tracking-wide">Eager</h2>
+        <p class="text-sm text-gray-500 mt-1">Meaning / Pronunciation</p>
+        <p class="text-xl font-semibold text-gray-700 mt-4">“আগ্রহী / ইগার”</p>
+      </div>
+
+
+      <!-- Buttons Section -->
+      <div class="flex justify-between w-full px-2 mb-2">
+        <button
+          class="bg-gray-100 p-3 rounded-full hover:bg-gray-200 active:scale-95 transition-transform duration-150">
+          <i class="fa-solid fa-circle-info text-gray-600 text-lg"></i>
+        </button>
+        <button
+          class="bg-gray-100 p-3 rounded-full hover:bg-gray-200 active:scale-95 transition-transform duration-150">
+          <i class="fa-solid fa-volume-high text-gray-600 text-lg"></i>
+        </button>
+      </div>
+    </div>
+
+  </section>
+
+
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
