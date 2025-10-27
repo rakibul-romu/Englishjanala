@@ -15,34 +15,40 @@ const lodeLessons = () => {
             const wordContainer = document.getElementById('word-container');
             wordContainer.innerHTML = '';
 
+            if(words.length === 0){
+                wordContainer.innerHTML = `
+                
+    <div class="text-center col-span-full raunded-xl  space-y-4">
+              <img src="./assets/alert-error.png" alt="error" class=" mx-auto";
+              >
+      <p class="text-sm ">এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।</p>
+      <h2 class="text-xl">নেক্সট Lesson এ যান</h2>
+    </div>
+                `;
+            }
+
             words.forEach(word =>{
                 const card = document.createElement('div');
                 card.innerHTML = `
-                 
-    <div
-      class="w-[228px] h-[258px] bg-white rounded-2xl shadow-lg flex flex-col justify-between items-center p-6 text-center transition hover:shadow-xl py-10 px-3 space-x-3 mt-5 ml-5 ">
-      <!-- Word Section -->
-      <div>
-        <h2 class="text-2xl font-bold text-gray-800 tracking-wide">Eager</h2>
-        <p class="text-sm text-gray-500 mt-1">Meaning / Pronunciation</p>
-        <p class="text-xl font-semibold text-gray-700 mt-4">“আগ্রহী / ইগার”</p>
-      </div>
-
-
-      <!-- Buttons Section -->
-      <div class="flex justify-between w-full px-2 mb-2">
-        <button
-          class="bg-gray-100 p-3 rounded-full hover:bg-gray-200 active:scale-95 transition-transform duration-150">
-          <i class="fa-solid fa-circle-info text-gray-600 text-lg"></i>
-        </button>
-        <button
-          class="bg-gray-100 p-3 rounded-full hover:bg-gray-200 active:scale-95 transition-transform duration-150">
-          <i class="fa-solid fa-volume-high text-gray-600 text-lg"></i>
-        </button>
-      </div>
+  <div class="bg-white rounded-2xl shadow-lg flex flex-col justify-between items-center p-6 text-center transition hover:shadow-xl py-10 px-3 space-x-3">
+    <!-- Word Section -->
+    <div>
+      <h2 class="text-2xl font-bold text-gray-800 tracking-wide">${word.word}</h2>
+      <p class="text-sm text-gray-500 mt-1"> 'Meaning / Pronunciation'</p>
+      <p class="text-xl font-semibold text-gray-700 mt-4"> '${word.meaning} / ${word.pronunciation}'}</p>
     </div>
-                `
-                wordContainer.append(card);
+    <!-- Buttons Section -->
+    <div class="flex justify-between w-full px-2 mb-2">
+      <button class="bg-gray-100 p-3 rounded-full hover:bg-gray-200 active:scale-95 transition-transform duration-150">
+        <i class="fa-solid fa-circle-info text-gray-600 text-lg"></i>
+      </button>
+      <button class="bg-gray-100 p-3 rounded-full hover:bg-gray-200 active:scale-95 transition-transform duration-150">
+        <i class="fa-solid fa-volume-high text-gray-600 text-lg"></i>
+      </button>
+    </div>
+  </div>
+`
+wordContainer.append(card);
             });
 
         }
